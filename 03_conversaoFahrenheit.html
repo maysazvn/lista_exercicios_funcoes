@@ -6,11 +6,18 @@
     */
 
     //ENTRADA
+    let temperatura = Number(prompt(`Informe a temperatura atual em graus Celsius.`));
 
 
     //PROCESSAMENTO
+    function calcularTemp(temp) {
+        let calcular = (9 * temp + 160) / 5;
+
+        alert(`A temperatura em fahrenheit é ${calcular}F`);
+    }
 
 
     //SAÍDA
+    calcularTemp(temperatura);
 
 </script>

@@ -6,11 +6,22 @@
     */
 
     //ENTRADA
-
+    let numero = Number(prompt(`Insira um número inteiro.`));
 
     //PROCESSAMENTO
-
+    if (numero % 2 != 0) {
+        function cubo(usuario) {
+            let calcular = usuario * usuario * usuario;
+            
+            alert(`O cubo do número ${usuario} é ${calcular}`);
+        }
+    } else{
+        alert(`Número não é inteiro.`);
+    }
+    
 
     //SAÍDA
+
+    cubo(numero);
 
 </script>
