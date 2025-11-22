@@ -6,11 +6,19 @@
     */
 
     //ENTRADA
-
+    let peso = prompt(`Informe seu peso (em kg).`);
+    let altura = prompt(`Informe sua altura (em m).`);
 
     //PROCESSAMENTO
+    function imc(p, a) {
+        let calcular = p /(a * a);
 
+        return calcular;
+    }
 
     //SAÍDA
+    let resultado = imc(peso, altura);
+
+    alert(`O seu IMC é ${resultado.toFixed(2)}`);
 
 </script>
