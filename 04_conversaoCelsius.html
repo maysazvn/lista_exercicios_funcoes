@@ -5,12 +5,19 @@
     C = (F - 32) * 5 / 9
     */
 
-    //ENTRADA
+  //ENTRADA
+    let temperatura = Number(prompt(`Informe a temperatura atual em graus Fahrenheit.`));
 
 
     //PROCESSAMENTO
+    function calcularTemp(temp) {
+        let calcular = (temp - 32) * 5 / 9;
+
+        alert(`A temperatura em celsius é ${calcular.toFixed(2)}C`);
+    }
 
 
     //SAÍDA
+    calcularTemp(temperatura);
 
 </script>

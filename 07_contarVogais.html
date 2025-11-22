@@ -7,11 +7,33 @@
     */
 
     //ENTRADA
+    let palavra = prompt(`Insira uma palavra`).toUpperCase();
+    let posicao = 0;
+    let vogais = 0;
+    let todasVogais = [];
 
 
     //PROCESSAMENTO
+    function contarVogais(usuarioPalavra) {
+        let soletrar = Array.from(usuarioPalavra);
+
+        while (posicao < soletrar.length) {
+
+            if (
+                soletrar[posicao] == "A" || soletrar[posicao] == "E" || soletrar[posicao] == "I" || soletrar[posicao] == "O" || soletrar[posicao] == "U"
+            ) {
+                todasVogais.push(soletrar[posicao]);
+                vogais++;
+            }
+
+            posicao++;
+        }
+    }
 
 
     //SAÍDA
+    contarVogais(palavra);
+
+    alert(`A palavra "${palavra}" tem ${vogais} vogais.`);
 
 </script>
