@@ -6,11 +6,31 @@
     */
 
     //ENTRADA
+    let frase = prompt(`Informe uma frase`).toUpperCase();
+    let letra = prompt(`Informe uma letra`).toUpperCase();
 
+    let posicao = 0;
+    let quantLetras = 0;
+    let letras = [];
 
     //PROCESSAMENTO
+    function contarLetra(f, l) {
+        let soletrar = Array.from(f);
+
+        while(posicao < soletrar.length){
+            if(soletrar[posicao] == l){
+                letras.push(soletrar[posicao]);
+                quantLetras++
+            }
+
+            posicao++
+        }
+    }
 
 
     //SAÍDA
+
+    let resultado = contarLetra(frase, letra)
+    alert(`A letra ${letra} aparece ${quantLetras} vezes na frase ${frase}.`);
 
 </script>
