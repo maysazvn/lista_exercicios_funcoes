@@ -9,22 +9,24 @@
 
     //ENTRADA
     let raio = Number(prompt(`Informe o raio desse círculo.`));
-    let diametro = raio * raio;
 
 
     //PROCESSAMENTO
-    function areaEPeri(r, d) {
+    function areaEPeri(r) {
+
+        let d = r * r;
+
         let area = 3.14 * d;
         let peri = 2 * 3.14 * r;
 
-        return(area, peri);
+        return (`A área é ${area.toFixed(1)}. O perímetro ${peri.toFixed(1)}`);
+        
 
     }
 
     //SAÍDA
 
-   let resultado =  areaEPeri(diametro, raio);
+    let resultado = areaEPeri(raio);
 
-    alert(`A área desse círculo é ${resultado} e o perímetro é ${resultado}.`);
-
+    alert(`${resultado} `);
 </script>

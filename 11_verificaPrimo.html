@@ -7,10 +7,29 @@
     //ENTRADA
     let numUsuario = Number(prompt(`Insira um número`));
 
+    let numeros = [];
+
     //PROCESSAMENTO
 
+    function primos(num) {
+        for (let divisiveis = 0; divisiveis <= num; divisiveis++) {
 
+            if (num % divisiveis == 0) {
+                numeros.push(num);
+            }
+
+        }
+
+        if (numeros.length != 2) {
+            return "não é"
+        } else {
+            return "é"
+        }
+    }
 
     //SAÍDA
+    let resposta = primos(numUsuario);
+
+    alert(`O número ${numUsuario} ${resposta} primo`);
 
 </script>
